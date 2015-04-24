@@ -4,11 +4,50 @@
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml" fx:controller="pruebaventanas.VentanaPrincipalController">
-    <children>
-        <Label layoutX="126" layoutY="60" minHeight="16" minWidth="69" fx:id="label" text="Ventana principal"/>
-        <Button layoutX="126" layoutY="90" text="Abrir Ventana" onAction="#nuevaVentana" fx:id="button" />
-    </children>
+<AnchorPane id="AnchorPane" prefHeight="400.0000558593674" prefWidth="639.9998948242137" style="-fx-background-color: #E2DCD0;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pruebaventanas.VentanaPrincipalController">
+  <children>
+    <Button fx:id="button" layoutX="93.0" layoutY="215.0" onAction="#nuevaVentana" text="Abrir Ventana" />
+    <MenuBar fx:id="BarraMenu" layoutX="0.0" layoutY="0.0" prefWidth="639.9995727539062">
+      <menus>
+        <Menu mnemonicParsing="false" text="Archivo" fx:id="Archivo">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#nuevaVentana" text="Venta" fx:id="Venta" />
+            <MenuItem mnemonicParsing="false" text="Nuevo Presupuesto" fx:id="nPresupuesto" />
+            <MenuItem mnemonicParsing="false" text="Salir" fx:id="Salir" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ayuda" fx:id="Ayuda" />
+      </menus>
+    </MenuBar>
+    <ImageView fitHeight="74.68841826455912" fitWidth="231.5341033935547" layoutX="206.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true" scaleX="2.75" scaleY="2.0">
+      <image>
+        <Image url="@conisoft.PNG" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="79.1752608152549" fitWidth="640.0" layoutX="0.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@upslp.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@logo2.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="162.32028198242188" fitWidth="338.49718116954574" layoutX="302.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@tikismikis.PNG" />
+      </image>
+    </ImageView>
+    <Label fx:id="tikis" layoutX="63.0" layoutY="160.0" text="Alejandra Meléndez Reyes">
+      <font>
+        <Font name="Tw Cen MT" size="16.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="mikis" font="$x1" layoutX="72.0" layoutY="182.0" text="Pedro Perafán Carrasco" />
+  </children>
 </AnchorPane>
