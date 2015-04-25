@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="380.0" prefHeight="380.0000999999975" prefWidth="716.999977929685" style="-fx-background-color: #E2DCD0;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pruebaventanas.HoliController">
+  <children>
+    <MenuBar depthTest="ENABLE" focusTraversable="false" layoutX="1.0" layoutY="0.0" minHeight="24.0" prefHeight="24.0" prefWidth="716.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Archivo" visible="true">
+          <items>
+            <MenuItem disable="false" mnemonicParsing="false" text="Venta" visible="false" />
+            <MenuItem mnemonicParsing="false" text="Nuevo Presupuesto" />
+            <MenuItem mnemonicParsing="false" text="Salir" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ayuda" />
+      </menus>
+    </MenuBar>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="385.0" prefWidth="717.0">
+      <children>
+        <Label layoutX="40.0" layoutY="117.0" prefHeight="16.0" text="ID" />
+        <Label layoutX="37.0" layoutY="147.0" prefHeight="16.0" prefWidth="44.0" text="Nombre" />
+        <Label id="label" layoutX="15.0" layoutY="29.0" minHeight="16.0" minWidth="69.0" prefHeight="24.0" prefWidth="156.0" text="Nuevo Presupuesto" textFill="#606060">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+        <Label layoutX="37.0" layoutY="222.0" prefHeight="16.0" prefWidth="52.0" text="Categoría" />
+        <ComboBox id="Producto" editable="false" layoutX="150.0" layoutY="79.0" prefHeight="21.0" prefWidth="105.0" promptText="Producto">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Productos" />
+              <String fx:value="Accesorios" />
+              <String fx:value="Consumibles" />
+              <String fx:value="Servicios" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <ComboBox id="Categoria" layoutX="25.0" layoutY="79.0" prefHeight="21.0" prefWidth="113.0" promptText="Categoría">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Proximamente" />
+              <String fx:value="Aqui" />
+              <String fx:value="Holi" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Label layoutX="37.0" layoutY="174.0" prefHeight="16.0" prefWidth="36.0" text="Precio " />
+        <Label layoutX="37.0" layoutY="198.0" prefHeight="16.0" prefWidth="29.0" text="Stock" />
+        <TextField id="IdPresupuesto" editable="false" layoutX="106.0" layoutY="114.0" prefWidth="120.0" />
+        <TextField id="Nombre" editable="false" layoutX="106.0" layoutY="144.0" prefWidth="120.0" />
+        <TextField id="StockProducto" editable="false" layoutX="106.0" layoutY="192.0" prefWidth="120.0" />
+        <TextField id="PrecioProducto" editable="false" layoutX="106.0" layoutY="168.0" prefWidth="120.0" />
+        <TextField id="CategoriaProducto" editable="false" layoutX="106.0" layoutY="219.0" prefWidth="120.0" />
+        <Label layoutX="37.0" layoutY="250.0" prefHeight="16.0" prefWidth="48.0" text="Cantidad" />
+        <Button id="eliminar" layoutX="438.0" layoutY="329.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="81.0" text="Eliminar" />
+        <Button id="guardar" layoutX="283.0" layoutY="329.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" text="Guardar" />
+        <Button id="cancelar" layoutX="581.0" layoutY="329.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" text="Cancelar" />
+        <TextField id="CantidadProducto" layoutX="106.0" layoutY="244.0" prefWidth="120.0" />
+        <TableView layoutX="269.0" layoutY="77.0" prefHeight="235.0" prefWidth="434.0">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="46.0" text="ID" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="92.0" text="Nombre" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Categoría" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="56.0" text="Precio" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="61.0" text="Cantidad" />
+            <TableColumn prefWidth="75.0" text="Total" />
+          </columns>
+        </TableView>
+        <Button id="Annadir" layoutX="123.0" layoutY="291.0" minHeight="21.0" minWidth="55.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="55.0" text="Añadir" />
+      </children>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@holi.css" />
+  </stylesheets>
+</AnchorPane>

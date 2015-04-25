@@ -2,6 +2,7 @@ package pruebaventanas;
 
 import java.io.IOException;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -52,7 +53,26 @@ public class PruebaVentanas extends Application {
         } catch (Exception e) {
         }
     }
+    public void mostrarVentanaPresupuesto() {
+        try {
+            FXMLLoader loader = new FXMLLoader(PruebaVentanas.class.getResource("Prueba2.fxml"));
+            AnchorPane prueba3 = (AnchorPane) loader.load();
+            Stage ventana3 = new Stage();
+            ventana3.setTitle("Nuevo Presupuesto");
+            ventana3.initOwner(stagePrincipal);
+            Scene scene = new Scene(prueba3);
+            ventana3.setScene(scene);
+            Prueba2Controller controller = loader.getController();
+            controller.setStagePrincipal(ventana3);
+            ventana3.show();
 
+        } catch (Exception e) {
+        }
+    }
+    public void salir(){
+        stagePrincipal.close();
+    }
+    
     public static void main(String[] args) {
         launch(args);
     }

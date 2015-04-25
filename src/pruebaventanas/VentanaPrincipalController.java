@@ -14,6 +14,14 @@ public class VentanaPrincipalController implements Initializable {
     private void nuevaVentana(ActionEvent event) {
         ProgramaPrincipal.mostrarVentanaSecundaria();
     }
+    @FXML
+    private void nuevaVentana2(ActionEvent event) {
+        ProgramaPrincipal.mostrarVentanaPresupuesto();
+    }
+    @FXML
+    private void salirVentana(ActionEvent event) {
+        ProgramaPrincipal.salir();
+    }
 
     public void setProgramaPrincipal(PruebaVentanas ProgramaPrincipal) {
         this.ProgramaPrincipal = ProgramaPrincipal;

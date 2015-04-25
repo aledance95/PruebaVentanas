@@ -1,11 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import java.net.*?>
 <?import java.util.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pruebaventanas.Prueba2Controller">
-    
+<AnchorPane id="AnchorPane" prefHeight="388.0" prefWidth="716.0" style="-fx-background-color: #E2DCD0;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pruebaventanas.Prueba2Controller">
+  <children>
+    <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="716.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Archivo">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Venta" />
+            <MenuItem mnemonicParsing="false" text="Nuevo Presupuesto" />
+            <MenuItem mnemonicParsing="false" text="Salir" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ayuda" />
+      </menus>
+    </MenuBar>
+    <Label id="label" layoutX="14.0" layoutY="29.0" minHeight="16.0" minWidth="69.0" text="Nuevo Presupuesto" textFill="#606060">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+    <ComboBox fx:id="Producto" editable="false" layoutX="149.0" layoutY="79.0" prefHeight="21.0" prefWidth="105.0" promptText="Producto">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Productos" />
+          <String fx:value="Accesorios" />
+          <String fx:value="Consumibles" />
+          <String fx:value="Servicios" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="Categoria" layoutX="24.0" layoutY="79.0" prefHeight="21.0" prefWidth="113.0" promptText="Categoría">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Proximamente" />
+          <String fx:value="Aqui" />
+          <String fx:value="Holi" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label layoutX="39.0" layoutY="117.0" text="ID" />
+    <Label layoutX="36.0" layoutY="147.0" text="Nombre" />
+    <Label layoutX="36.0" layoutY="174.0" text="Precio " />
+    <Label layoutX="36.0" layoutY="198.0" text="Stock" />
+    <Label layoutX="36.0" layoutY="222.0" text="Categoría" />
+    <TextField id="IdPresupuesto" fx:id="IdProducto" editable="false" layoutX="105.0" layoutY="114.0" prefWidth="120.0" />
+    <TextField id="Nombre" fx:id="NombreProducto" editable="false" layoutX="105.0" layoutY="144.0" prefWidth="120.0" />
+    <TextField fx:id="PrecioProducto" editable="false" layoutX="105.0" layoutY="168.0" prefWidth="120.0" />
+    <TextField fx:id="StockProducto" editable="false" layoutX="105.0" layoutY="192.0" prefWidth="120.0" />
+    <TextField fx:id="CategoriaProducto" editable="false" layoutX="105.0" layoutY="219.0" prefWidth="120.0" />
+    <TableView layoutX="268.0" layoutY="77.0" prefHeight="235.0" prefWidth="434.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="46.0" text="ID" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="92.0" text="Nombre" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Categoría" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="56.0" text="Precio" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="61.0" text="Cantidad" />
+        <TableColumn prefWidth="75.0" text="Total" />
+      </columns>
+    </TableView>
+    <Button fx:id="Annadir" layoutX="122.0" layoutY="291.0" mnemonicParsing="false" text="Añadir" />
+    <Label layoutX="36.0" layoutY="250.0" text="Cantidad" />
+    <TextField fx:id="CantidadProducto" layoutX="105.0" layoutY="244.0" prefWidth="120.0" />
+    <Button fx:id="eliminar" layoutX="437.0" layoutY="329.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="81.0" text="Eliminar" />
+    <Button fx:id="guardar" layoutX="282.0" layoutY="329.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" text="Guardar" />
+    <Button fx:id="cancelar" layoutX="580.0" layoutY="329.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" text="Cancelar" />
+  </children>
+  <stylesheets>
+    <URL value="@holi.css" />
+  </stylesheets>
 </AnchorPane>

@@ -10,14 +10,13 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0000558593674" prefWidth="639.9998948242137" style="-fx-background-color: #E2DCD0;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pruebaventanas.VentanaPrincipalController">
   <children>
-    <Button fx:id="button" layoutX="93.0" layoutY="215.0" onAction="#nuevaVentana" text="Abrir Ventana" />
     <MenuBar fx:id="BarraMenu" layoutX="0.0" layoutY="0.0" prefWidth="639.9995727539062">
       <menus>
         <Menu mnemonicParsing="false" text="Archivo" fx:id="Archivo">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#nuevaVentana" text="Venta" fx:id="Venta" />
-            <MenuItem mnemonicParsing="false" text="Nuevo Presupuesto" fx:id="nPresupuesto" />
-            <MenuItem mnemonicParsing="false" text="Salir" fx:id="Salir" />
+            <MenuItem mnemonicParsing="false" onAction="#nuevaVentana2" text="Nuevo Presupuesto" fx:id="nPresupuesto" />
+            <MenuItem mnemonicParsing="false" onAction="#salirVentana" text="Salir" fx:id="Salir" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Ayuda" fx:id="Ayuda" />

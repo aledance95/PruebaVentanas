@@ -1,0 +1,25 @@
+
+
+.label-header{
+    -fx-text-fill:#4EF04C;
+    -fx-font-family:"Khmer UI";
+    -fx-font-size: 14;
+    -fx-opacity: 0.6;
+}
+.text-field{
+    //-fx-background-color: #76746F;
+    -fx-focus-color: #4EF04C;
+    
+}
+.tab {
+-fx-background-color: linear-gradient(to top, -fx-base, derive(-fx-base,30%));
+}
+
+
+.my-gridpane {
+-fx-background-color: radial-gradient(radius 100%, derive(-fx-base,20%), derive(-fx-base,-20%));
+}
+ 
+.separator-label {
+-fx-text-fill: orange;
+}
