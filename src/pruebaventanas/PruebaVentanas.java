@@ -18,8 +18,8 @@ public class PruebaVentanas extends Application {
     @Override
     public void start(Stage stagePrincipal) throws Exception {
         this.stagePrincipal = stagePrincipal;
-        mostrarVentanaPrincipal();
-      //  login();
+        //mostrarVentanaPrincipal();
+        login();
 
     }
 

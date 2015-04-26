@@ -75,6 +75,8 @@ public class LoginvendedorController implements Initializable {
         catch(Exception e){
             System.out.println("Se ha encontrado  "+ e.getMessage());
         }  
+        stagePrincipal.close();
+        ProgramaPrincipal.mostrarVentanaPrincipal();
     }
    
     @Override
