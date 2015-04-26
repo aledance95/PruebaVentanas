@@ -5,11 +5,12 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.stage.Stage;
 
 public class VentanaPrincipalController implements Initializable {
 
     private PruebaVentanas ProgramaPrincipal;
-
+    private Stage stagePrincipal;
     @FXML
     private void nuevaVentana(ActionEvent event) {
         ProgramaPrincipal.mostrarVentanaSecundaria();
@@ -22,18 +23,17 @@ public class VentanaPrincipalController implements Initializable {
     private void salirVentana(ActionEvent event) {
         ProgramaPrincipal.salir();
     }
-    @FXML 
-    private void login1(ActionEvent event){
-        ProgramaPrincipal.login();
-        
-    }
-   @FXML
    
-
+/*
     public void setProgramaPrincipal(PruebaVentanas ProgramaPrincipal) {
         this.ProgramaPrincipal = ProgramaPrincipal;
     }
-
+*/
+   public void setStagePrincipal(Stage stagePrincipal) {
+        this.stagePrincipal = stagePrincipal;
+        
+      
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
