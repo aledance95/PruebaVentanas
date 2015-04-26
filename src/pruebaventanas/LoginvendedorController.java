@@ -16,6 +16,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -30,8 +31,11 @@ import javafx.scene.control.TextField;
  */
 public class LoginvendedorController implements Initializable {
      private Stage stagePrincipal;
+     @FXML
     public TextField user;
+    @FXML
     public PasswordField pass;
+    @FXML
     private PruebaVentanas ProgramaPrincipal;
     
     public void setStagePrincipal(Stage stagePrincipal) {
@@ -58,11 +62,13 @@ public class LoginvendedorController implements Initializable {
                 resultado = estado.executeQuery("SELECT * FROM `vendedor` WHERE usuario = '"+ user.getText() +"' and password = '"+ pass.getText() +"'");               
                 System.out.println("lishto");
                   while(resultado.next()){
+                      
                       if(resultado.getString("usuario").equals(user.getText()) && resultado.getString("password").equals(pass.getText())){
-                            System.out.println("si son iguales");
-                         //   ProgramaPrincipal.mostrarVentanaPrincipal();
-                      }else{
-                          System.out.println("no son iguales");
+                            System.out.println("si son iguales");                  
+                      }
+                      else{
+                          System.out.println("nooson iguales");
+                        
                       }
                   }
         }
