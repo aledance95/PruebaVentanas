@@ -2956,7 +2956,7 @@
     </target>
 
 
-    <!-- WITH SIGNING -->
+    <!-- WITH SIGNING <deploy-sign/>-->
 
     <!-- project without preloader -->
     <!-- no html template -->
@@ -2965,7 +2965,7 @@
         <deploy-defines/>
         <deploy-preprocess/>
         <deploy-jar/>
-        <deploy-sign/>
+        
         <deploy-deploy/>
     </target>
     <target name="-deploy-app-sign-blob-nopreloader-notemplate" depends="-check-sign" if="sign-blob-nopreloader-notemplate" unless="preloader-app">
