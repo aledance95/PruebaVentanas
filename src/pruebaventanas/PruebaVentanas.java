@@ -9,7 +9,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-
 public class PruebaVentanas extends Application {
 
     private Stage stagePrincipal;
