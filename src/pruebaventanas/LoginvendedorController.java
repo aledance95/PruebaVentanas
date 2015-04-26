@@ -16,6 +16,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -36,6 +37,8 @@ public class LoginvendedorController implements Initializable {
     public PasswordField pass;
     @FXML
     private PruebaVentanas ProgramaPrincipal;
+    @FXML
+    private Label mensaje;
     /*
     public void setStagePrincipal(Stage stagePrincipal) {
         this.stagePrincipal = stagePrincipal;
@@ -78,7 +81,7 @@ public class LoginvendedorController implements Initializable {
             System.out.println("Listo");    
         }else{
             System.out.println("Error en usuario y/o contraseña");
-                
+            mensaje.setText("Usuario y/o contraseña incorrecta D:");
         }
         
     }

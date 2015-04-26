@@ -11,13 +11,8 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-<<<<<<< HEAD
-    <jar href="PruebaVentanas.jar" size="1411310" download="eager" />
-    <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="860474" download="eager" />
-=======
-    <jar href="PruebaVentanas.jar" size="1395621" download="eager" />
-    <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="860467" download="eager" />
->>>>>>> origin/master
+    <jar href="PruebaVentanas.jar" size="1407322" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="827921" download="eager" />
   </resources>
 <security>
   <all-permissions/>
