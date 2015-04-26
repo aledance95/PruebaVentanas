@@ -83,7 +83,6 @@ public class LoginvendedorController implements Initializable {
             System.out.println("Error en usuario y/o contraseña");
             mensaje.setText("Usuario y/o contraseña incorrecta D:");
         }
-        
     }
    
     @Override
