@@ -6,12 +6,14 @@
 <?import javafx.collections.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="388.0" prefWidth="716.0" style="-fx-background-color: #E2DCD0;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pruebaventanas.Prueba2Controller">
+<AnchorPane id="AnchorPane" prefHeight="387.9998779296875" prefWidth="731.0" style="-fx-background-color: #3F3F3E;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pruebaventanas.Prueba2Controller">
   <children>
-    <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="716.0">
+    <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="731.0">
       <menus>
         <Menu mnemonicParsing="false" text="Archivo">
           <items>
@@ -23,12 +25,12 @@
         <Menu mnemonicParsing="false" text="Ayuda" />
       </menus>
     </MenuBar>
-    <Label id="label" layoutX="14.0" layoutY="29.0" minHeight="16.0" minWidth="69.0" text="Nuevo Presupuesto" textFill="#606060">
+    <Label id="label" layoutX="87.0" layoutY="24.0" minHeight="16.0" minWidth="69.0" text="Nuevo" textFill="#079f00">
       <font>
-        <Font size="18.0" />
+        <Font name="OCR A Extended" size="45.0" />
       </font>
     </Label>
-    <ComboBox fx:id="Producto" editable="false" layoutX="149.0" layoutY="79.0" prefHeight="21.0" prefWidth="105.0" promptText="Producto">
+    <ComboBox fx:id="Producto" editable="false" layoutX="149.0" layoutY="104.0" prefHeight="21.0" prefWidth="105.0" promptText="Producto">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Productos" />
@@ -38,7 +40,7 @@
         </FXCollections>
       </items>
     </ComboBox>
-    <ComboBox fx:id="Categoria" layoutX="24.0" layoutY="79.0" prefHeight="21.0" prefWidth="113.0" promptText="Categoría">
+    <ComboBox fx:id="Categoria" layoutX="24.0" layoutY="104.0" prefHeight="21.0" prefWidth="113.0" promptText="Categoría">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Proximamente" />
@@ -47,34 +49,80 @@
         </FXCollections>
       </items>
     </ComboBox>
-    <Label layoutX="39.0" layoutY="117.0" text="ID" />
-    <Label layoutX="36.0" layoutY="147.0" text="Nombre" />
-    <Label layoutX="36.0" layoutY="174.0" text="Precio " />
-    <Label layoutX="36.0" layoutY="198.0" text="Stock" />
-    <Label layoutX="36.0" layoutY="222.0" text="Categoría" />
-    <TextField id="IdPresupuesto" fx:id="IdProducto" editable="false" layoutX="105.0" layoutY="114.0" prefWidth="120.0" />
-    <TextField id="Nombre" fx:id="NombreProducto" editable="false" layoutX="105.0" layoutY="144.0" prefWidth="120.0" />
-    <TextField fx:id="PrecioProducto" editable="false" layoutX="105.0" layoutY="168.0" prefWidth="120.0" />
-    <TextField fx:id="StockProducto" editable="false" layoutX="105.0" layoutY="192.0" prefWidth="120.0" />
-    <TextField fx:id="CategoriaProducto" editable="false" layoutX="105.0" layoutY="219.0" prefWidth="120.0" />
-    <TableView layoutX="268.0" layoutY="77.0" prefHeight="235.0" prefWidth="434.0">
+    <Label layoutX="38.0" layoutY="146.0" text="ID" textFill="WHITE" />
+    <Label layoutX="35.0" layoutY="176.0" text="Nombre" textFill="WHITE" />
+    <Label layoutX="35.0" layoutY="203.0" text="Precio " textFill="WHITE" />
+    <Label layoutX="35.0" layoutY="227.0" text="Stock" textFill="WHITE" />
+    <Label layoutX="35.0" layoutY="251.0" text="Categoría" textFill="WHITE" />
+    <TextField id="IdPresupuesto" fx:id="IdProducto" editable="false" layoutX="101.0" layoutY="143.0" prefWidth="120.00009999999747" />
+    <TextField id="Nombre" fx:id="NombreProducto" editable="false" layoutX="101.0" layoutY="170.0" prefWidth="120.0" />
+    <TextField fx:id="PrecioProducto" editable="false" layoutX="101.0" layoutY="197.0" prefWidth="120.0" />
+    <TextField fx:id="StockProducto" editable="false" layoutX="101.0" layoutY="224.0" prefWidth="120.0" />
+    <TextField fx:id="CategoriaProducto" editable="false" layoutX="101.0" layoutY="251.0" prefWidth="120.0" />
+    <TableView id="Tabla" layoutX="288.0" layoutY="75.0" prefHeight="235.0" prefWidth="434.0" style="">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="46.0" text="ID" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="92.0" text="Nombre" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Categoría" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="56.0" text="Precio" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="61.0" text="Cantidad" />
-        <TableColumn prefWidth="75.0" text="Total" />
+        <TableColumn id="Table" maxWidth="5000.0" minWidth="10.0" prefWidth="46.0" style="" text="ID" />
+        <TableColumn id="Tabla" maxWidth="5000.0" minWidth="10.0" prefWidth="92.0" text="Nombre" />
+        <TableColumn id="Tabla" maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Categoría" />
+        <TableColumn id="Tabla" maxWidth="5000.0" minWidth="10.0" prefWidth="56.0" text="Precio" />
+        <TableColumn id="Tabla" maxWidth="5000.0" minWidth="10.0" prefWidth="61.0" text="Cantidad" />
+        <TableColumn id="Tabla" prefWidth="75.0" text="Total" />
       </columns>
     </TableView>
-    <Button fx:id="Annadir" layoutX="122.0" layoutY="291.0" mnemonicParsing="false" text="Añadir" />
-    <Label layoutX="36.0" layoutY="250.0" text="Cantidad" />
-    <TextField fx:id="CantidadProducto" layoutX="105.0" layoutY="244.0" prefWidth="120.0" />
-    <Button fx:id="eliminar" layoutX="437.0" layoutY="329.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="81.0" text="Eliminar" />
-    <Button fx:id="guardar" layoutX="282.0" layoutY="329.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" text="Guardar" />
-    <Button fx:id="cancelar" layoutX="580.0" layoutY="329.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" text="Cancelar" />
+    <Button id="record-salesdos" fx:id="Annadir" layoutX="109.0" layoutY="329.0" minHeight="32.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="105.0" text="Añadir" textFill="WHITE">
+      <graphic>
+        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@mascarro_white.png" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Label layoutX="35.0" layoutY="279.0" text="Cantidad" textFill="WHITE" />
+    <TextField fx:id="CantidadProducto" layoutX="101.0" layoutY="279.0" prefWidth="119.9998779296875" />
+    <Button id="record-salesdos" fx:id="eliminar" layoutX="449.0" layoutY="329.0" minHeight="35.9998779296875" mnemonicParsing="false" prefHeight="35.9998779296875" prefWidth="113.0" text="Eliminar" textFill="WHITE">
+      <graphic>
+        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@delete.png" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button id="record-salesdos" fx:id="guardar" layoutX="297.0" layoutY="329.0" minHeight="25.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="112.0" text="Guardar" textFill="WHITE">
+      <graphic>
+        <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@save.png" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button id="record-salesdos" fx:id="cancelar" layoutX="587.0" layoutY="329.0" minHeight="36.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="113.0" text="Cancelar" textFill="WHITE">
+      <graphic>
+        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@cancel.png" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <ImageView fitHeight="66.0" fitWidth="66.0" layoutX="15.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@money.png" />
+      </image>
+    </ImageView>
+    <Label id="label" layoutX="88.0" layoutY="64.0" minHeight="16.0" minWidth="69.0" text="Presupuesto">
+      <font>
+        <Font name="OCR A Extended" size="20.0" />
+      </font>
+      <textFill>
+        <Color blue="0.000" green="0.624" red="0.027" fx:id="x1" />
+      </textFill>
+    </Label>
   </children>
   <stylesheets>
-    <URL value="@holi.css" />
+    <URL value="@ventanados.css" />
+    <URL value="@ventanados.css" />
   </stylesheets>
 </AnchorPane>

@@ -1,25 +1,47 @@
 
-
-.label-header{
-    -fx-text-fill:#4EF04C;
-    -fx-font-family:"Khmer UI";
-    -fx-font-size: 14;
-    -fx-opacity: 0.6;
+.text-field:focused {
+    -fx-background-color:
+        #f39400,
+        #FFFFFF;    
 }
-.text-field{
-    //-fx-background-color: #76746F;
-    -fx-focus-color: #4EF04C;
+.table-view{
+    -fx-base: #f39400;
+    -fx-control-inner-background: #f39400;
+    -fx-background-color: #FFFFFF;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: #FFFFFF;
+    -fx-padding: 1;
     
+}   
+.table-view .column-header .label{
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
 }
-.tab {
--fx-background-color: linear-gradient(to top, -fx-base, derive(-fx-base,30%));
+#record-sales {
+    -fx-padding: 5 13 13 13;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #E49C28 0%, #EC9E21 100%),
+        #f39400
+        #F6AF3D,
+        radial-gradient(center 50% 50%, radius 100%, #f39400, #F6AF3D);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
 }
-
-
-.my-gridpane {
--fx-background-color: radial-gradient(radius 100%, derive(-fx-base,20%), derive(-fx-base,-20%));
+#record-sales:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #E49C28 0%, #EC9E21 100%),
+        #f39400
+        #F6AF3D,
+        radial-gradient(center 50% 50%, radius 100%, #F7A726, #FCB748);
 }
- 
-.separator-label {
--fx-text-fill: orange;
+#record-sales:pressed {
+    -fx-padding: 8 13 10 13;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+#record-sales Text {
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #a30000 , 0,0,0,2 );
 }
