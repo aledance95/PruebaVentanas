@@ -80,6 +80,7 @@ public class LoginvendedorController implements Initializable {
             System.out.println("Error en usuario y/o contraseña");
                 
         }
+        
     }
    
     @Override
