@@ -6,15 +6,20 @@
 package pruebaventanas;
 
 import java.net.URL;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 /*
-import java.sql.*;
-import java.io.*;
-import java.util.*;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -25,8 +30,9 @@ import javafx.scene.control.TextField;
  */
 public class LoginvendedorController implements Initializable {
      private Stage stagePrincipal;
-//    private TextField user;
-//    private PasswordField pass;
+    public TextField user;
+    public PasswordField pass;
+    private PruebaVentanas ProgramaPrincipal;
     
     public void setStagePrincipal(Stage stagePrincipal) {
         this.stagePrincipal = stagePrincipal;
@@ -42,18 +48,25 @@ public class LoginvendedorController implements Initializable {
     @FXML
     private void IniciarSesion(ActionEvent event){
         System.out.println("holi");
-   /*    
-try{
-                  Class.forName("com.mysql.jdbc.Driver");
-                  System.out.println("entree");
-                  Connection con = DriverManager.getConnection("jdbc:mysql://localhost/concurso","root","");
-                  System.out.println("casi");
-                  Statement estado = con.createStatement();
-                 ResultSet resultado;
-            resultado = estado.executeQuery("SELECT * FROM `vendedor` WHERE usuario = '"+ user.getText() +"' && password = '"+ pass.getText() +"'");
-                  System.out.println(resultado.getString("usuario"));
-                  System.out.println("casiiii");
-        }catch(SQLException e){
+        try{
+                Class.forName("com.mysql.jdbc.Driver");
+                System.out.println("entree");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost/concurso","root","");
+                System.out.println("casi");
+                Statement estado = con.createStatement();
+                ResultSet resultado;
+                resultado = estado.executeQuery("SELECT * FROM `vendedor` WHERE usuario = '"+ user.getText() +"' and password = '"+ pass.getText() +"'");               
+                System.out.println("lishto");
+                  while(resultado.next()){
+                      if(resultado.getString("usuario").equals(user.getText()) && resultado.getString("password").equals(pass.getText())){
+                            System.out.println("si son iguales");
+                         //   ProgramaPrincipal.mostrarVentanaPrincipal();
+                      }else{
+                          System.out.println("no son iguales");
+                      }
+                  }
+        }
+        catch(SQLException e){
             System.out.println("Error de mysql");
         }
         catch(ClassNotFoundException e){
@@ -62,8 +75,6 @@ try{
         catch(Exception e){
             System.out.println("Se ha encontrado  "+ e.getMessage());
         }  
-
-*/
     }
    
     @Override
