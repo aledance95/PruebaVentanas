@@ -40,6 +40,11 @@
         <Image url="@lock.png" />
       </image>
     </ImageView>
+    <Label id="invalid_label" fx:id="messege" layoutX="116.0" layoutY="254.0" text="" textFill="RED">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Label>
   </children>
   <stylesheets>
     <URL value="@loginvendedor.css" />
