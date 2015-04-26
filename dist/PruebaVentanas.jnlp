@@ -12,12 +12,26 @@
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <jar href="PruebaVentanas.jar" size="1407322" download="eager" />
     <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="827921" download="eager" />
 =======
     <jar href="PruebaVentanas.jar" size="1394676" download="eager" />
     <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="860467" download="eager" />
 >>>>>>> bf8827de37eed170e97e77ed3e25ebf803ba0d32
+=======
+    <jar href="PruebaVentanas.jar" size="1394676" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="860467" download="eager" />
+=======
+<<<<<<< HEAD
+    <jar href="PruebaVentanas.jar" size="1394563" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="860468" download="eager" />
+=======
+    <jar href="PruebaVentanas.jar" size="1411255" download="eager" />
+    <jar href="lib/mysql-connector-java-5.0.8-bin.jar" size="560375" download="eager" />
+>>>>>>> origin/master
+>>>>>>> parent of e0c7981... hola
+>>>>>>> 72ca28d380a83bba37123dd08b43bb89c5b084f1
   </resources>
 <security>
   <all-permissions/>
