@@ -8,18 +8,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0000558593674" prefWidth="639.9998948242137" style="-fx-background-color: #E2DCD0;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pruebaventanas.VentanaPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="400.0000558593674" prefWidth="639.9998948242137" style="-fx-background-color: #E2DCD0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pruebaventanas.VentanaPrincipalController">
   <children>
     <MenuBar fx:id="BarraMenu" layoutX="0.0" layoutY="0.0" prefWidth="639.9995727539062">
       <menus>
-        <Menu mnemonicParsing="false" text="Archivo" fx:id="Archivo">
+        <Menu fx:id="Archivo" mnemonicParsing="false" text="Archivo">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#nuevaVentana" text="Venta" fx:id="Venta" />
-            <MenuItem mnemonicParsing="false" onAction="#nuevaVentana2" text="Nuevo Presupuesto" fx:id="nPresupuesto" />
-            <MenuItem mnemonicParsing="false" onAction="#salirVentana" text="Salir" fx:id="Salir" />
+            <MenuItem fx:id="Venta" mnemonicParsing="false" onAction="#nuevaVentana" text="Venta" />
+            <MenuItem fx:id="nPresupuesto" mnemonicParsing="false" onAction="#nuevaVentana2" text="Nuevo Presupuesto" />
+            <MenuItem fx:id="Salir" mnemonicParsing="false" onAction="#salirVentana" text="Salir" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Ayuda" fx:id="Ayuda" />
+        <Menu fx:id="Ayuda" mnemonicParsing="false" text="Ayuda" />
       </menus>
     </MenuBar>
     <ImageView fitHeight="74.68841826455912" fitWidth="231.5341033935547" layoutX="206.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true" scaleX="2.75" scaleY="2.0">
@@ -48,6 +48,5 @@
       </font>
     </Label>
     <Label fx:id="mikis" font="$x1" layoutX="72.0" layoutY="182.0" text="Pedro Perafán Carrasco" />
-    <Button id="boton1" layoutX="50.0" layoutY="218.0" mnemonicParsing="false" onAction="#login1" text="Button" />
   </children>
 </AnchorPane>

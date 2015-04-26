@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+
 public class PruebaVentanas extends Application {
 
     private Stage stagePrincipal;
@@ -28,6 +29,7 @@ public class PruebaVentanas extends Application {
      */
     public void mostrarVentanaPrincipal() {
         try {
+            /*
             FXMLLoader loader = new FXMLLoader(PruebaVentanas.class.getResource("VentanaPrincipal.fxml"));
             rootPane=(AnchorPane) loader.load();
             Scene scene = new Scene(rootPane);
@@ -36,7 +38,20 @@ public class PruebaVentanas extends Application {
             VentanaPrincipalController controller = loader.getController();
             controller.setProgramaPrincipal(this);
             stagePrincipal.show();
-        } catch (IOException e) {
+            */
+            FXMLLoader loader = new FXMLLoader(PruebaVentanas.class.getResource("VentanaPrincipal.fxml"));
+            AnchorPane ventanaPrincipal = (AnchorPane) loader.load();
+            Stage ventana = new Stage();
+            ventana.setTitle("Ventana Principal");
+            ventana.initOwner(stagePrincipal);
+            Scene scene = new Scene(ventanaPrincipal);
+            ventana.setScene(scene);
+            VentanaPrincipalController controller = loader.getController();
+            controller.setStagePrincipal(ventana);
+            ventana.show();
+        
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
         }
     }
 
@@ -78,6 +93,7 @@ public class PruebaVentanas extends Application {
 
     public void login(){
          try {
+             /*
             FXMLLoader loader = new FXMLLoader(PruebaVentanas.class.getResource("loginvendedor.fxml"));
             AnchorPane login = (AnchorPane) loader.load();
             Stage ventanalogin = new Stage();
@@ -88,8 +104,16 @@ public class PruebaVentanas extends Application {
             LoginvendedorController controller = loader.getController();
             controller.setStagePrincipal(ventanalogin);
             ventanalogin.show();
-
-        } catch (Exception e) {
+            */
+            FXMLLoader loader = new FXMLLoader(PruebaVentanas.class.getResource("loginvendedor.fxml"));
+            rootPane=(AnchorPane) loader.load();
+            Scene scene = new Scene(rootPane);
+            stagePrincipal.setTitle("Inicio de Sesión");
+            stagePrincipal.setScene(scene);
+            LoginvendedorController controller = loader.getController();
+            controller.setProgramaPrincipal(this);
+            stagePrincipal.show();
+        } catch (IOException e) {
         }
     }
     public static void main(String[] args) {
