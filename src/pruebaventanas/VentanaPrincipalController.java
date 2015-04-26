@@ -22,6 +22,13 @@ public class VentanaPrincipalController implements Initializable {
     private void salirVentana(ActionEvent event) {
         ProgramaPrincipal.salir();
     }
+    @FXML 
+    private void login1(ActionEvent event){
+        ProgramaPrincipal.login();
+        
+    }
+   @FXML
+   
 
     public void setProgramaPrincipal(PruebaVentanas ProgramaPrincipal) {
         this.ProgramaPrincipal = ProgramaPrincipal;

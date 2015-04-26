@@ -5,6 +5,7 @@ import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -12,6 +13,7 @@ public class PruebaVentanas extends Application {
 
     private Stage stagePrincipal;
     private AnchorPane rootPane;
+    private TextField user;
 
     @Override
     public void start(Stage stagePrincipal) throws Exception {
@@ -72,7 +74,23 @@ public class PruebaVentanas extends Application {
     public void salir(){
         stagePrincipal.close();
     }
-    
+
+    public void login(){
+         try {
+            FXMLLoader loader = new FXMLLoader(PruebaVentanas.class.getResource("loginvendedor.fxml"));
+            AnchorPane login = (AnchorPane) loader.load();
+            Stage ventanalogin = new Stage();
+            ventanalogin.setTitle("Inicio de Sesión");
+            ventanalogin.initOwner(stagePrincipal);
+            Scene scene = new Scene(login);
+            ventanalogin.setScene(scene);
+            LoginvendedorController controller = loader.getController();
+            controller.setStagePrincipal(ventanalogin);
+            ventanalogin.show();
+
+        } catch (Exception e) {
+        }
+    }
     public static void main(String[] args) {
         launch(args);
     }
