@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 public class VentanaDosController implements Initializable {
     private Stage stagePrincipal;
     
+    
+    
     public void setStagePrincipal(Stage stagePrincipal) {
         this.stagePrincipal = stagePrincipal;
         

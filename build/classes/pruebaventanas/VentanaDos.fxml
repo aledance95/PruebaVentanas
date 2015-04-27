@@ -75,13 +75,13 @@
     <TextField editable="false" layoutX="530.0" layoutY="130.0" prefWidth="63.0" />
     <TextField layoutX="596.0" layoutY="130.0" prefWidth="63.0" />
     <TextField editable="false" layoutX="671.0" layoutY="130.0" prefWidth="95.0" />
-    <TableView layoutX="265.0" layoutY="210.0" prefHeight="144.0" prefWidth="501.0" style="">
+    <TableView fx:id="TablaVenta" layoutX="265.0" layoutY="210.0" prefHeight="144.0" prefWidth="501.0" style="">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="62.0" resizable="false" style="" text="ID" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="122.0" resizable="false" text="Nombre" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" resizable="false" text="Precio Venta" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" resizable="false" style="" text="Cantidad" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" resizable="false" text="Total" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="62.0" resizable="false" style="" text="ID" fx:id="id" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="122.0" resizable="false" text="Nombre" fx:id="nombre" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" resizable="false" text="Precio Venta" fx:id="precioventa" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" resizable="false" style="" text="Cantidad" fx:id="cantidad" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" resizable="false" text="Total" fx:id="total" />
       </columns>
     </TableView>
     <Button id="record-sales" fx:id="Proceder" layoutX="568.0" layoutY="364.0" minHeight="25.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" style="" text="Proceder" textFill="WHITE">
