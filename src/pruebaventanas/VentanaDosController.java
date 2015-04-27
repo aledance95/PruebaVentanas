@@ -49,7 +49,7 @@ public class VentanaDosController implements Initializable {
     private TextField cantidad;
     @FXML
     private TextField total;
-    
+    @FXML
     private TableView<Person> table = new TableView<Person>();
     private final ObservableList<Person> data =
         FXCollections.observableArrayList(
