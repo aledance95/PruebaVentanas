@@ -9,7 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-
+import javafx.scene.input.KeyEvent;
+import javafx.event.EventHandler;
 
 public class PruebaVentanas extends Application {
 
@@ -20,7 +21,14 @@ public class PruebaVentanas extends Application {
     @Override
     public void start(Stage stagePrincipal) throws Exception {
 
-        
+        stagePrincipal.addEventHandler(KeyEvent.KEY_PRESSED,
+            new EventHandler<KeyEvent>(){
+            @Override
+            public void handle(KeyEvent e) {
+                // TODO Auto-generated method stub
+               System.out.println(e);
+            }
+        });
         this.stagePrincipal = stagePrincipal;
         //mostrarVentanaPrincipal();
         login();
