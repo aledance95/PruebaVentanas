@@ -10,8 +10,11 @@ import javafx.stage.Stage;
 public class VentanaDosController implements Initializable {
     private Stage stagePrincipal;
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> parent of 025eacd... Tablas de ventas
 =======
 >>>>>>> parent of 025eacd... Tablas de ventas
     

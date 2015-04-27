@@ -13,10 +13,13 @@
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <jar href="PruebaVentanas.jar" size="1415230" download="eager" />
     <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="860473" download="eager" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 025eacd... Tablas de ventas
 =======
 >>>>>>> parent of 025eacd... Tablas de ventas
     <jar href="PruebaVentanas.jar" size="1411468" download="eager" />
@@ -26,6 +29,9 @@
     <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="860470" download="eager" />
 >>>>>>> origin/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 025eacd... Tablas de ventas
+=======
 >>>>>>> parent of 025eacd... Tablas de ventas
 =======
 >>>>>>> parent of 025eacd... Tablas de ventas
