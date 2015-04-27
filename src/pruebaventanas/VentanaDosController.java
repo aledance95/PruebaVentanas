@@ -1,5 +1,6 @@
 package pruebaventanas;
 
+import java.util.Date;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,6 +29,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class VentanaDosController implements Initializable {
+    private SimpleDateFormat sdf;
     private Stage stagePrincipal;
 
     public void setStagePrincipal(Stage stagePrincipal) {
@@ -40,6 +43,16 @@ public class VentanaDosController implements Initializable {
         stagePrincipal.close();
     }
     @FXML
+    private TextField avisodelmal;
+    @FXML
+    private TextField idcliente;
+    @FXML
+    private TextField nombrecliente;
+    @FXML
+    private TextField apellidocliente;
+    @FXML
+    private TextField fechaventa;
+    @FXML
     private TextField idarticulo;
     @FXML
     private TextField nombre;
@@ -52,6 +65,7 @@ public class VentanaDosController implements Initializable {
     @FXML
     private TextField total;
     @FXML
+<<<<<<< HEAD
     private Label megatotal;
     @FXML 
     private Button anadir;
@@ -61,6 +75,62 @@ public class VentanaDosController implements Initializable {
 
 private ObservableList<Person> personData = FXCollections.observableArrayList();
     
+=======
+    private TextField idventavendedor;
+    @FXML
+    private TextField nombreventavendedor;
+    @FXML
+    private TextField apellidoventavendedor;
+    @FXML
+    private TextField idnumero;
+    @FXML
+    private TableView<Person> table = new TableView<Person>();
+    private final ObservableList<Person> data =
+        FXCollections.observableArrayList(
+            new Person("Jacob", "Smith", "jacob.smith@example.com"),
+            new Person("Isabella", "Johnson", "isabella.johnson@example.com"),
+            new Person("Ethan", "Williams", "ethan.williams@example.com"),
+            new Person("Emma", "Jones", "emma.jones@example.com"),
+            new Person("Michael", "Brown", "michael.brown@example.com")
+        );
+   @FXML
+   private void press(KeyEvent event){
+       int bandera = 0;
+       try{
+                
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost/concurso","root","");
+                Statement estado = con.createStatement();
+                ResultSet resultado;
+                resultado = estado.executeQuery("SELECT * FROM cliente WHERE ID = '"+idcliente.getText()+"'");               
+                while(resultado.next()){
+                    if( idcliente.getText().equals(resultado.getString("id"))){
+                        System.out.println("jdjsahdjahdjad");
+                        nombrecliente.setText(resultado.getString("nombre"));
+                        apellidocliente.setText(resultado.getString("apellidopaterno") +" " +resultado.getString("apellidomaterno"));
+                    
+                    }else if(!idcliente.getText().equals(resultado.getString("id"))){
+                        System.out.println("nada");
+                        nombrecliente.setText("");
+                        apellidocliente.setText("");
+                        
+                    }
+                                  
+                }
+              
+        }
+        catch(SQLException e){
+            System.out.println("Error de mysql");
+        }
+        catch(ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        catch(Exception e){
+            System.out.println("Se ha encontrado  "+ e.getMessage());
+        } 
+       
+   }
+>>>>>>> origin/master
     
   
     @FXML 
@@ -148,8 +218,40 @@ private ObservableList<Person> personData = FXCollections.observableArrayList();
         fiveCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("total"));
  
+<<<<<<< HEAD
   
         table.getColumns().addAll(firstCol, secondCol, thirdCol, quarterCol, fiveCol); 
+=======
+        table.setItems(data);
+        table.getColumns().addAll(firstNameCol, lastNameCol, emailCol); 
+        
+        sdf = new SimpleDateFormat("dd.MM.yyyy  hh:mm:ss ");
+        fechaventa.setText(sdf.format(new Date()));
+        
+        try{
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost/concurso","root","");
+                Statement estado = con.createStatement();
+                ResultSet resultado;
+                resultado = estado.executeQuery("SELECT * FROM ventas ORDER BY 'ID' LIMIT 1 ");               
+                while(resultado.next()){ 
+                     idnumero.setText(Integer.toString(Integer.parseInt(resultado.getString("ID"))+1));
+                    System.out.println("holaaa "+resultado.getString("ID"));
+                }
+        }
+        catch(SQLException e){
+            System.out.println("Error de mysql");
+        }
+        catch(ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        catch(Exception e){
+            System.out.println("Se ha encontrado  "+ e.getMessage());
+        } 
+        idventavendedor.setText("1");
+        nombreventavendedor.setText("Pedro");
+        apellidoventavendedor.setText("Perafan Carrasco");
+>>>>>>> origin/master
     }
     
     public static class Person {
