@@ -13,9 +13,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -50,15 +52,14 @@ public class VentanaDosController implements Initializable {
     @FXML
     private TextField total;
     @FXML
+    private Label megatotal;
+    @FXML 
+    private Button anadir;
+    
+    @FXML
     private TableView<Person> table = new TableView<Person>();
-    private final ObservableList<Person> data =
-        FXCollections.observableArrayList(
-            new Person("Jacob", "Smith", "jacob.smith@example.com"),
-            new Person("Isabella", "Johnson", "isabella.johnson@example.com"),
-            new Person("Ethan", "Williams", "ethan.williams@example.com"),
-            new Person("Emma", "Jones", "emma.jones@example.com"),
-            new Person("Michael", "Brown", "michael.brown@example.com")
-        );
+
+private ObservableList<Person> personData = FXCollections.observableArrayList();
     
     
   
@@ -95,28 +96,60 @@ public class VentanaDosController implements Initializable {
         total.setText(hola);
         
     }
+    @FXML
+    private void anadir(MouseEvent event){
+        int bandera=0;
+        String data[] = new String[5];
+        data[0] = idarticulo.getText();
+        data[1] = nombre.getText();
+        data[2] = precio.getText();
+        data[3] = cantidad.getText();
+        data[4] = total.getText();
+        for(int i=0;i<5;i++){
+            if(data[i]==null){
+                bandera=1;
+            }
+        }
+        if(bandera==0){
+        personData.add(new Person(data[0],data[1],data[2],data[3],data[4]));
+        table.setItems(personData);
+        }
+        int mega = Integer.parseInt(megatotal.getText())+Integer.parseInt(total.getText());
+        megatotal.setText(Integer.toString(mega));
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     table.setEditable(false);
  
-        TableColumn firstNameCol = new TableColumn("First Name");
-        firstNameCol.setMinWidth(100);
-        firstNameCol.setCellValueFactory(
+        TableColumn firstCol = new TableColumn("ID");
+        firstCol.setMinWidth(100);
+        firstCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("firstName"));
  
-        TableColumn lastNameCol = new TableColumn("Last Name");
-        lastNameCol.setMinWidth(100);
-        lastNameCol.setCellValueFactory(
+        TableColumn secondCol = new TableColumn("Nombre");
+        secondCol.setMinWidth(100);
+        secondCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("lastName"));
  
-        TableColumn emailCol = new TableColumn("Email");
-        emailCol.setMinWidth(200);
-        emailCol.setCellValueFactory(
+        TableColumn thirdCol = new TableColumn("Precio Venta");
+        thirdCol.setMinWidth(100);
+        thirdCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("email"));
+        
+        TableColumn quarterCol = new TableColumn("Cantidad");
+        quarterCol.setMinWidth(100);
+        quarterCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("cantidad"));
+        
+        TableColumn fiveCol = new TableColumn("Total");
+        fiveCol.setMinWidth(100);
+        fiveCol.setCellValueFactory(
+                new PropertyValueFactory<Person, String>("total"));
  
-        table.setItems(data);
-        table.getColumns().addAll(firstNameCol, lastNameCol, emailCol); 
+  
+        table.getColumns().addAll(firstCol, secondCol, thirdCol, quarterCol, fiveCol); 
     }
     
     public static class Person {
@@ -124,11 +157,15 @@ public class VentanaDosController implements Initializable {
         private final SimpleStringProperty firstName;
         private final SimpleStringProperty lastName;
         private final SimpleStringProperty email;
+        private final SimpleStringProperty cantidad;
+        private final SimpleStringProperty total;
  
-        private Person(String fName, String lName, String email) {
+        private Person(String fName, String lName, String email,String cantidads,String totals) {
             this.firstName = new SimpleStringProperty(fName);
             this.lastName = new SimpleStringProperty(lName);
             this.email = new SimpleStringProperty(email);
+            this.cantidad = new SimpleStringProperty(cantidads);
+            this.total = new SimpleStringProperty(totals);
         }
  
         public String getFirstName() {
@@ -153,6 +190,20 @@ public class VentanaDosController implements Initializable {
  
         public void setEmail(String fName) {
             email.set(fName);
+        }
+        public String getCantidad() {
+            return cantidad.get();
+        }
+ 
+        public void setCantidad(String fName) {
+            cantidad.set(fName);
+        }
+        public String getTotal() {
+            return total.get();
+        }
+ 
+        public void setTotal(String fName) {
+            total.set(fName);
         }
     } 
 }
