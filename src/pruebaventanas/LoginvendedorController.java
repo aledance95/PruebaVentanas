@@ -20,6 +20,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.input.KeyEvent;
+import javafx.event.EventHandler;
 /*
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -39,6 +41,7 @@ public class LoginvendedorController implements Initializable {
     private PruebaVentanas ProgramaPrincipal;
     @FXML
     private Label mensaje;
+    
     /*
     public void setStagePrincipal(Stage stagePrincipal) {
         this.stagePrincipal = stagePrincipal;
@@ -50,6 +53,7 @@ public class LoginvendedorController implements Initializable {
     private void salirVentana(ActionEvent event) {
         stagePrincipal.close();
     }
+    
     
     @FXML
     private void IniciarSesion(ActionEvent event){
@@ -87,6 +91,15 @@ public class LoginvendedorController implements Initializable {
    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        /*
+        stagePrincipal.addEventHandler(KeyEvent.KEY_PRESSED,
+            new EventHandler<KeyEvent>(){
+            @Override
+            public void handle(KeyEvent e) {
+                // TODO Auto-generated method stub
+               System.out.println(e);
+            }
+        });
+                */
     }    
 }
