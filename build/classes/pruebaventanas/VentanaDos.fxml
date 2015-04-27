@@ -71,6 +71,9 @@
     <Label font="$x4" layoutX="694.0" layoutY="111.0" text="Total" textFill="WHITE" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 025eacd... Tablas de ventas
 =======
 >>>>>>> parent of 025eacd... Tablas de ventas
     <TextField layoutX="269.0" layoutY="130.0" prefWidth="34.0" />
@@ -79,6 +82,7 @@
     <TextField editable="false" layoutX="530.0" layoutY="130.0" prefWidth="63.0" />
     <TextField layoutX="596.0" layoutY="130.0" prefWidth="63.0" />
     <TextField editable="false" layoutX="671.0" layoutY="130.0" prefWidth="95.0" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <TableView fx:id="TablaVenta" layoutX="265.0" layoutY="210.0" prefHeight="144.0" prefWidth="501.0" style="">
 =======
@@ -90,6 +94,9 @@
     <TextField fx:id="total" editable="false" layoutX="671.0" layoutY="130.0" prefWidth="95.0" />
     <TableView fx:id="table" layoutX="265.0" layoutY="210.0" prefHeight="144.0" prefWidth="501.0" style="">
 >>>>>>> origin/master
+=======
+    <TableView layoutX="265.0" layoutY="210.0" prefHeight="144.0" prefWidth="501.0" style="">
+>>>>>>> parent of 025eacd... Tablas de ventas
 =======
     <TableView layoutX="265.0" layoutY="210.0" prefHeight="144.0" prefWidth="501.0" style="">
 >>>>>>> parent of 025eacd... Tablas de ventas
