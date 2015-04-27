@@ -13,8 +13,11 @@ public class VentanaDosController implements Initializable {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> parent of 025eacd... Tablas de ventas
 =======
 >>>>>>> parent of 025eacd... Tablas de ventas
 =======
