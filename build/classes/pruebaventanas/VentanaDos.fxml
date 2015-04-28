@@ -73,21 +73,8 @@
     <TextField fx:id="stock" editable="false" layoutX="530.0" layoutY="130.0" prefWidth="63.0" />
     <TextField fx:id="cantidad" layoutX="596.0" layoutY="130.0" onKeyPressed="#cantidad" prefWidth="63.0" />
     <TextField fx:id="total" editable="false" layoutX="671.0" layoutY="130.0" prefWidth="95.0" />
-<<<<<<< HEAD
     <TableView fx:id="table" layoutX="265.0" layoutY="210.0" prefHeight="144.0" prefWidth="501.0" style="" />
     <Button id="record-sales" fx:id="Proceder" layoutX="483.0" layoutY="363.0" minHeight="25.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" style="" text="Proceder" textFill="WHITE">
-=======
-    <TableView fx:id="table" layoutX="265.0" layoutY="210.0" prefHeight="144.0" prefWidth="501.0" style="">
-      <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="62.0" resizable="false" style="" text="ID" fx:id="id" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="122.0" resizable="false" text="Nombre" fx:id="nombretable" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" resizable="false" text="Precio Venta" fx:id="precioventatable" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" resizable="false" style="" text="Cantidad" fx:id="cantidadtable" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" resizable="false" text="Total" fx:id="totaltable" />
-      </columns>
-    </TableView>
-    <Button id="record-sales" fx:id="Proceder" layoutX="568.0" layoutY="364.0" minHeight="25.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" style="" text="Proceder" textFill="WHITE">
->>>>>>> origin/master
       <graphic>
         <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
           <image>
@@ -126,15 +113,15 @@
     <Separator layoutX="251.0" layoutY="77.0" orientation="VERTICAL" prefHeight="310.0" />
     <Separator layoutX="30.0" layoutY="169.0" prefWidth="200.0" />
     <Separator layoutX="30.0" layoutY="288.0" prefWidth="200.0" />
-<<<<<<< HEAD
-      <Label fx:id="megatotal" layoutX="625.0" layoutY="367.0">
+
+      <Label fx:id="megatotal" layoutX="625.0" layoutY="367.0" text="0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-=======
-    <Label layoutX="27.0" layoutY="397.0" prefWidth="207.0" text="" textFill="#ff3333" />
->>>>>>> origin/master
+
+    <Label fx:id="avisodelmal" layoutX="27.0" layoutY="397.0" prefWidth="207.0" text="" textFill="#ff3333" />
+
   </children>
   <stylesheets>
     <URL value="@holi.css" />

@@ -65,17 +65,14 @@ public class VentanaDosController implements Initializable {
     @FXML
     private TextField total;
     @FXML
-<<<<<<< HEAD
     private Label megatotal;
     @FXML 
     private Button anadir;
-    
+
     @FXML
     private TableView<Person> table = new TableView<Person>();
+    private ObservableList<Person> personData = FXCollections.observableArrayList();
 
-private ObservableList<Person> personData = FXCollections.observableArrayList();
-    
-=======
     private TextField idventavendedor;
     @FXML
     private TextField nombreventavendedor;
@@ -83,16 +80,7 @@ private ObservableList<Person> personData = FXCollections.observableArrayList();
     private TextField apellidoventavendedor;
     @FXML
     private TextField idnumero;
-    @FXML
-    private TableView<Person> table = new TableView<Person>();
-    private final ObservableList<Person> data =
-        FXCollections.observableArrayList(
-            new Person("Jacob", "Smith", "jacob.smith@example.com"),
-            new Person("Isabella", "Johnson", "isabella.johnson@example.com"),
-            new Person("Ethan", "Williams", "ethan.williams@example.com"),
-            new Person("Emma", "Jones", "emma.jones@example.com"),
-            new Person("Michael", "Brown", "michael.brown@example.com")
-        );
+    
    @FXML
    private void press(KeyEvent event){
        int bandera = 0;
@@ -130,9 +118,6 @@ private ObservableList<Person> personData = FXCollections.observableArrayList();
         } 
        
    }
->>>>>>> origin/master
-    
-  
     @FXML 
     private void cambio(KeyEvent event){
         try{
@@ -217,14 +202,10 @@ private ObservableList<Person> personData = FXCollections.observableArrayList();
         fiveCol.setMinWidth(100);
         fiveCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("total"));
- 
-<<<<<<< HEAD
-  
+
         table.getColumns().addAll(firstCol, secondCol, thirdCol, quarterCol, fiveCol); 
-=======
-        table.setItems(data);
-        table.getColumns().addAll(firstNameCol, lastNameCol, emailCol); 
-        
+
+
         sdf = new SimpleDateFormat("dd.MM.yyyy  hh:mm:ss ");
         fechaventa.setText(sdf.format(new Date()));
         
@@ -251,7 +232,7 @@ private ObservableList<Person> personData = FXCollections.observableArrayList();
         idventavendedor.setText("1");
         nombreventavendedor.setText("Pedro");
         apellidoventavendedor.setText("Perafan Carrasco");
->>>>>>> origin/master
+
     }
     
     public static class Person {
